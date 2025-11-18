@@ -1,4 +1,46 @@
+#GIT FOR HPI SUBJECT
+
+#MIT License
+
+#Copyright (c) 2025 kanghaozhan
+
+#Permission is hereby granted, free of charge, to any person obtaining a copy
+#of this software and associated documentation files (the "Software"), to deal
+#in the Software without restriction, including without limitation the rights
+#to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+#copies of the Software, and to permit persons to whom the Software is
+#furnished to do so, subject to the following conditions:
+
+#The above copyright notice and this permission notice shall be included in all
+#copies or substantial portions of the Software.
+
+#THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+#IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+#FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+#AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+#LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+#OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+#SOFTWARE.
+
+#Testing numbers to convert
+numerals_1 = "III"
+numerals_2 = "XIX"
+numerals_3 = "CCIc"
+numerals_4 = "MDCLX"
+
+#Function to convert a string of roman numbers to int of arabic(normal) numbers
 def roman_to_int(roman: str) -> int:
+
+  """
+  Convert roman numbers and returns their equivalent in arabic ones.
+      Args:
+          roman (str): 
+              A string of roman numbers.
+              Example: ["III"]
+  
+      Returns:
+          int: The function returns the equivalent number for the string of roman numerals.
+  """
 
   # We specify the value of each letter
   values = {
@@ -37,8 +79,7 @@ def roman_to_int(roman: str) -> int:
 
   return total
 
-#Casos de prueba
-print(roman_to_int("III"))
-print(roman_to_int("XIX"))
-print(roman_to_int("CCIC"))
-print(roman_to_int("MDCLX"))
+print(roman_to_int(numerals_1))
+print(roman_to_int(numerals_2))
+print(roman_to_int(numerals_3))
+print(roman_to_int(numerals_4))
