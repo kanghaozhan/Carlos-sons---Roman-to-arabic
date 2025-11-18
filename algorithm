@@ -1,2 +1,39 @@
-def roman_to_int(roman){
-}
+def roman_to_int(roman):
+    #We specify the values of each roman numeral
+    values = {
+        'I': 1,
+        'V': 5,
+        'X': 10,
+        'L': 50,
+        'C': 100,
+        'D': 500,
+        'M': 1000
+   }
+    
+    '''
+    To avoid conflicts, we convert all letters to 
+    uppercase if they're not already
+    '''
+    roman = roman.upper()
+    total = 0  #This is the counter
+    i = 0  #This is the index
+
+    #We create a loop to go through each letter
+    while i < len(roman):
+        current_value = values[roman[i]]
+
+        #If we're not at the end, we check the next letter
+        if i + 1 < len(roman):
+            next_value = values[roman[i + 1]]
+
+            #If the current value is less than the next, we subtract it
+            if current_value < next_value:
+                total += next_value - current_value
+                i += 2  #We skip the next letter since we already used it
+                continue
+        
+        #Normal case: addition 
+        total += current_value
+        i += 1  #Move to the next letter
+
+    return total       
